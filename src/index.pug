@@ -1,0 +1,15 @@
+block variables
+
+doctype html
+html(lang="en")
+    head
+        title=pageTitle
+        link(rel='stylesheet', href='css/style.css')
+        script(src='js/main.js')
+
+    body
+        include layouts/header.pug
+
+        block content
+
+        include layouts/footer.pug
