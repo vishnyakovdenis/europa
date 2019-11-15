@@ -1,0 +1,97 @@
+#header
+  @include media-breakpoint-down(md)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+
+.main-nav
+  border-top: 1px solid #E0E0E0
+
+  a
+    color: $body-color
+    padding: 20px 0
+    &:hover
+      color: $primary
+  .current-menu-item
+    > a
+      color: $secondary
+  .menu-item-has-children
+    &:hover
+      > ul
+        visibility: visible
+        opacity: 1
+    > a:after
+      content: ''
+      margin-left: 8px
+      border-left: 3px solid transparent
+      border-right: 3px solid transparent
+      border-top: 3px solid currentColor
+  li
+    position: relative
+  ul ul
+    font-weight: $font-weight-light
+    padding: 0 0 20px
+    background: white
+    opacity: 0
+    visibility: hidden
+    transition: .2s
+    position: absolute
+    width: 220px
+    left: -30px
+    top: 99.9%
+
+    a
+      padding: 10px 2rem
+
+.header-top
+  [type="search"]
+    height: 40px
+    padding-left: 45px
+    background-color: #000
+    width: 210px
+    transition: .5s
+    &::placeholder
+      color: #4F4F4F
+    &:focus
+      width: 310px
+      + input
+        opacity: 1
+        visibility: visible
+
+  form
+    overflow: hidden
+    i
+      color: #4F4F4F
+      left: 20px
+    [type="submit"]
+      right: 0
+      opacity: 0
+      visibility: hidden
+      transition: .2s
+
+.logo
+  img
+    max-width: 105px
+    @include media-breakpoint-up(xl)
+      max-width: 200px
+
+#search,
+#navbar
+  z-index: -1
+
+#navbar
+  > *
+    padding: 35px 0
+
+.mobile
+  &-nav
+    a
+      padding: 12px 0
+    .current-menu-item
+      > a
+        color: $green
+    .menu-item-has-children
+      > a:after
+        content: ''
+        margin-left: 8px
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-top: 3px solid $primary

@@ -1,0 +1,26 @@
+
+#call-me.modal.fade
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5.modal-title Заказать звонок
+                button.close(type='button' data-dismiss='modal')
+                    span(aria-hidden='true') &times;
+            .modal-body
+                | Call me back form
+
+#measure-sign.modal.fade
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5.modal-title Записаться на замеры
+                button.close(type='button' data-dismiss='modal')
+                    span(aria-hidden='true') &times;
+            .modal-body
+                | Measure form
+
+
+script(src='js/main.js')
+link(href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap&subset=cyrillic-ext' rel='stylesheet')
+
+include ../partials/icons

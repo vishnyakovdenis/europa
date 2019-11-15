@@ -1,0 +1,132 @@
+header#header.position-relative
+    .header-top.bg-dark.small.d-none.d-xl-block
+        .container
+            .row.align-items-center
+                .col-auto
+                    ul.nav
+                        - for (var x = 1; x < 6; x++) {
+                        li.menu-item
+                            a.d-block.nav-link.text-light.p-0.mr-5(href='#') Nav item #{x}
+                        - }
+                .col-auto.ml-auto.d-flex.align-items-center
+                    a.text-light.text-decoration-none(href='#')
+                        svg(width='20' height='20')
+                            use(href='#icon-vk')
+                    a.text-light.text-decoration-none.ml-3(href='#')
+                        svg(width='16' height='16')
+                            use(href='#icon-insta')
+                .col-auto
+                    form.position-relative.d-flex.align-items-center
+                        i.position-absolute
+                            svg(width='12' height='12')
+                                use(href='#icon-search')
+                        input.form-control.border-0(type='search' placeholder='Поиск')
+                        input.btn.btn-primary.border-0.position-absolute(type='submit' value='Поиск')
+
+    .container.py-2.py-xl-4
+        .row.align-items-center
+            .col-4.d-xl-none
+                button.btn.px-0(
+                type='button'
+                data-toggle='collapse'
+                data-target='#navbar'
+                )
+                    svg(width='20' height='14')
+                        use(href='#icon-nav-menu')
+            .col-4.col-xl-auto.d-flex.justify-content-center.logo
+                a.d-block(href='#')
+                    img(src='img/logo.png')
+            .col-auto.d-none.d-xl-block.ml-2
+                | Мебельная фабрика <br> европейского уровня <br> в Хабаровске!
+            .col-auto.d-none.d-xl-block.ml-3.font-weight-light
+                .d-flex.align-items-center
+                    i.text-secondary.mr-2.pr-1
+                        svg(width='17' height='17')
+                            use(href='#icon-home')
+                    span Уссурийский бульвар, 58
+                .d-flex.align-items-center.mt-2
+                    i.text-secondary.mr-2.pr-1
+                        svg(width='17' height='17')
+                            use(href='#icon-home')
+                    span ул. Павла Морозова, 113
+            .col-auto.d-none.d-xl-block.ml-auto.font-weight-light
+                a.d-flex.align-items-center.justify-content-end.text-body.text-decoration-none(href='tel:+74212516430')
+                    i.text-secondary.mr-2.pr-1
+                        svg(width='17' height='17')
+                            use(href='#icon-phone')
+                    span.h5.m-0 +7 (4212) 51-64-30
+                a.d-flex.align-items-center.mt-2.justify-content-end.text-body(href='mailto:salon@europakhv.ru')
+                    i.text-secondary.mr-2.pr-1
+                        svg(width='18' height='12')
+                            use(href='#icon-mail')
+                    span salon@europakhv.ru
+            .col-auto.d-none.d-xl-block.ml-3
+                button.btn.btn-outline-primary.btn-block.mb-2(type='button' data-toggle='modal' data-target='#call-me') Заказать звонок
+                button.btn.btn-link.d-flex.align-items-center.p-0.text-decoration-none(type='button' data-toggle='modal' data-target='#measure-sign')
+                    i.mr-2.pr-1
+                        svg(width='14' height='14')
+                            use(href='#icon-pencil')
+                    span Записаться на замеры
+
+            .col-4.d-flex.justify-content-end.d-xl-none
+                button.btn.px-0(
+                type='button'
+                data-toggle='collapse'
+                data-target='#search'
+                )
+                    svg(width='16' height='16')
+                        use(href='#icon-search')
+
+    .main-nav.d-none.d-xl-block
+        .container
+            ul.nav.w-100.justify-content-between
+                li.menu-item.current-menu-item
+                    a.nav-link(href='#') Home
+                - for (var x = 1; x < 3; x++) {
+                li.menu-item.menu-item-has-children
+                    a.nav-link(href='#') Nav item #{x}
+                    ul.sub-menu
+                        li.menu-item
+                            a.nav-link(href="#") Sub menu item 1
+                        li.menu-item
+                            a.nav-link(href="#") Sub menu item 2
+                - }
+                - for (var x = 1; x < 5; x++) {
+                li.menu-item
+                    a.nav-link(href='#') Other Link #{x}
+                - }
+
+
+
+    #navbar.collapse.bg-white.position-absolute.w-100(data-parent="#header")
+        .bg-primary.text-white
+            .container
+                button.btn.btn-outline-light.mb-3(type='button' data-toggle='modal' data-target='#call-me') Заказать звонок
+                a.d-block.text-white(href="tel:123") +7 (4212) 51-64-30
+        .text-uppercase
+            .container
+                ul.mobile-nav.list-unstyled.small
+                    li.menu-item.current-menu-item
+                        a.nav-link.d-block.text-decoration-none(href='#') Current menu item
+
+                    - for (var x = 1; x < 6; x++) {
+                    li.menu-item.menu-item-has-children
+                        a.nav-link.align-items-center.text-decoration-none(href="#") Menu item #{x}
+                        ul.sub-menu.collapse.pl-4
+                            li.menu-item
+                                a.nav-link(href="#") Sub menu item 1
+                            li.menu-item
+                                a.nav-link(href="#") Sub menu item 2
+                    - }
+        .pt-0.small
+            .container
+                ul.list-unstyled.mobile-nav
+                    - for (var x = 1; x < 6; x++) {
+                    li.menu-item
+                        a.nav-link.text-decoration-none.text-body(href="#") Menu item #{x}
+                    - }
+
+
+    #search.collapse.bg-white.py-3.position-absolute.w-100(data-parent="#header")
+        .container
+            input.form-control(type='search' placeholder='Search')
