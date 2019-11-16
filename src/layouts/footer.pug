@@ -1,26 +1,53 @@
 
-#call-me.modal.fade
-    .modal-dialog.modal-dialog-centered
-        .modal-content
-            .modal-header
-                h5.modal-title Заказать звонок
-                button.close(type='button' data-dismiss='modal')
-                    span(aria-hidden='true') &times;
-            .modal-body
-                | Call me back form
+footer#footer
+    .footer-top.bg-dark.py-5
+        .container.py-xl-3
+            .row
+                .col-12.col-xl-2
+                    img.footer-logo(src='img/logo.png')
+                    p.text-muted.mt-4 Мебельная фабрика европейского уровня в Хабаровске!
 
-#measure-sign.modal.fade
-    .modal-dialog.modal-dialog-centered
-        .modal-content
-            .modal-header
-                h5.modal-title Записаться на замеры
-                button.close(type='button' data-dismiss='modal')
-                    span(aria-hidden='true') &times;
-            .modal-body
-                | Measure form
+                .col-3.d-none.d-xl-block.pl-4
+                    ul.list-unstyled
+                        - for (var x = 1; x < 5; x++) {
+                        li.menu-item
+                            a.nav-link.text-decoration-none.text-light(href="#") Menu item #{x}
+                        - }
 
+                .col-12.col-xl-3.mt-4.mt-xl-0
+                    p.text-white.h5.mb-3 Подпишитесь, чтобы всегда быть в курсе новых акций и скидок
+                    form.d-flex.footer-subscription
+                        input.form-control.bg-dark.border-right-0(type='email' placeholder='E-mail')
+                        input.btn.btn-outline-primary.text-white(type='submit' value='Подписаться')
+                    p.text-muted.small.mt-3 Нажимая кнопку Подписаться, я принимаю политику <a href="#">конфиденциальности</a>
+
+                .col-12.col-xl-2.mt-5.ml-auto.mt-xl-0
+                    .row.align-items-start
+                        .col-8.col-xl-12
+                            a.text-white.h4.d-flex(href='tel:+74212516430') +7 (4212) 51-64-30
+                            a.text-secondary.h5.d-flex(href='mailto:salon@europakhv.ru') salon@europakhv.ru
+                            button.btn.btn-block.btn-outline-secondary.mb-3.mt-4.text-white(type='button' data-toggle='modal' data-target='#call-me') Заказать звонок
+                        .col-4.col-xl-12.justify-content-end.d-flex.align-items-center.justify-content-xl-start
+                            a.text-secondary.text-decoration-none(href='#')
+                                svg(width='25' height='25')
+                                    use(href='#icon-vk')
+                            a.text-secondary.text-decoration-none.ml-3(href='#')
+                                svg(width='19' height='19')
+                                    use(href='#icon-insta')
+                                    
+    .footer-bottom.bg-black.text-muted.py-4
+        .container
+            .row
+                .col-12.col-xl-5
+                    | © Европа, салон мебели 2005-2019
+                .col-12.col-xl-3.py-3.py-xl-0
+                    a.text-muted(href="#") Политика конфиденциальности
+                .col-12.col-xl-3.ml-auto.text-xl-right
+                    a(href="#").text-secondary Digital-маркетинг - front-view.ru
+
+
+include ../partials/modals
+include ../partials/icons
 
 script(src='js/main.js')
 link(href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap&subset=cyrillic-ext' rel='stylesheet')
-
-include ../partials/icons

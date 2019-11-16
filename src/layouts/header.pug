@@ -26,13 +26,15 @@ header#header.position-relative
     .container.py-2.py-xl-4
         .row.align-items-center
             .col-4.d-xl-none
-                button.btn.px-0(
+                button.btn.px-0.position-relative.d-flex.align-items-center.justify-content-center.a-btn.collapsed(
                 type='button'
                 data-toggle='collapse'
                 data-target='#navbar'
                 )
                     svg(width='20' height='14')
                         use(href='#icon-nav-menu')
+                    svg(width='14' height='14').position-absolute
+                        use(href='#icon-close')
             .col-4.col-xl-auto.d-flex.justify-content-center.logo
                 a.d-block(href='#')
                     img(src='img/logo.png')
@@ -69,13 +71,15 @@ header#header.position-relative
                     span Записаться на замеры
 
             .col-4.d-flex.justify-content-end.d-xl-none
-                button.btn.px-0(
+                button.btn.px-0.position-relative.d-flex.align-items-center.justify-content-center.a-btn.collapsed(
                 type='button'
                 data-toggle='collapse'
                 data-target='#search'
                 )
                     svg(width='16' height='16')
                         use(href='#icon-search')
+                    svg(width='14' height='14').position-absolute
+                        use(href='#icon-close')
 
     .main-nav.d-none.d-xl-block
         .container
@@ -95,8 +99,6 @@ header#header.position-relative
                 li.menu-item
                     a.nav-link(href='#') Other Link #{x}
                 - }
-
-
 
     #navbar.collapse.bg-white.position-absolute.w-100(data-parent="#header")
         .bg-primary.text-white
@@ -125,7 +127,6 @@ header#header.position-relative
                     li.menu-item
                         a.nav-link.text-decoration-none.text-body(href="#") Menu item #{x}
                     - }
-
 
     #search.collapse.bg-white.py-3.position-absolute.w-100(data-parent="#header")
         .container
