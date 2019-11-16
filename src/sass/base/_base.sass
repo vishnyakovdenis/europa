@@ -1,3 +1,6 @@
+body
+  letter-spacing: .1px
+
 svg
   display: block
 
@@ -13,10 +16,41 @@ img
 .nav-link
   display: flex
 
-
 .nav-link
   display: flex
   align-items: center
 
 ul.sub-menu
   @extend .list-unstyled
+
+.btn-line
+  display: block
+  position: relative
+  color: $body-color
+  font-weight: $font-weight-bold
+  font-size: 12px
+  text-decoration: none
+
+  @include media-breakpoint-up(xl)
+    font-size: 14px
+
+  &:after
+    content: ''
+    display: block
+    width: 40px
+    height: 3px
+    background: $primary
+    margin-top: 12px
+
+    @include media-breakpoint-up(xl)
+      width: 70px
+
+  &:hover
+    color: $primary
+    text-decoration: none
+
+  &.btn-line-secondary
+    &:hover
+      color: $secondary
+    &:after
+      background: $secondary

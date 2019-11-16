@@ -4,3 +4,12 @@ block variables
     - var pageTitle = 'Main'
 
 block content
+    .container.p-0.px-xl-3
+        .swiper-container.main-slider
+            .swiper-wrapper
+                - for(x = 0; x < 3; x++) {
+                .swiper-slide
+                    include ../partials/promo
+                - }
+            .swiper-pagination
+
