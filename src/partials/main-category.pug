@@ -1,0 +1,32 @@
+mixin category(type, title, img)
+    div(class={
+      "col-xl-4": type === 'small',
+      'col-6': type === 'small' || type === 'big',
+      'col-12 col-xl-4 px-xl-5 mt-5 mt-xl-0': type === 'medium'
+    }).main-category(class="main-category-" + type)
+        .row.h-100
+            .col-12(class={
+              "col-xl-8": type === 'big',
+              "col-xl-6": type === 'small'
+            })
+                a.category-image.d-flex.bg-cover.h-100.mr-xl-1(style="background-image: url(img/" + img + ")" href='#' class={
+                  "ar-1-1": type !== 'medium',
+                  "ar-2-1": type === 'medium'
+                })
+            .col-12.d-flex.flex-column(class={
+              "col-xl-4": type === 'big',
+              "col-xl-6": type === 'small'
+            })
+                h3.mt-4.mt-xl-0.mb-0(class={
+                  "h4": type === 'small',
+                  "pt-3 pr-xl-5 h4": type === 'medium'
+                })
+                    a.text-body.text-decoration-none(href='#') #{title}
+                if type !== 'medium'
+                    ul.nav.flex-column.mt-4.d-none.d-xl-flex
+                        - for (var x = 1; x < 3; x++) {
+                        li.menu-item
+                            a.nav-link.px-0.text-body.font-weight-light.pt-0(href="#") Nav Item
+                        -}
+
+                    a.btn-line.font-weight-bold.mt-auto(href="#") Подробнее

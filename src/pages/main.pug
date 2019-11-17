@@ -1,4 +1,5 @@
 extends ../index
+include ../partials/main-category
 
 block variables
     - var pageTitle = 'Main'
@@ -12,4 +13,29 @@ block content
                     include ../partials/promo
                 - }
             .swiper-pagination
+
+    .container
+        .row.mt-5.pt-5
+            + category('big', 'Шкафы', 'kitchen.jpg')
+            + category('big', 'Кухни', 'kitchen.jpg')
+        .row.mt-5.pt-4
+            + category('small', 'Детские', 'kitchen.jpg')
+            + category('medium', 'Гостиные и спальни из Италии', 'kitchen.jpg')
+            + category('small', 'Мебель для юр. лиц', 'kitchen.jpg')
+    .container.main-builtin-tech.mt-5.pt-5
+        .row
+            .col-12
+                h2.text-uppercase.text-center.font-weight-bold.mb-5.mt-5 Встраиваемая техника
+            - var tech = {duh: 'Духовые шкафы', mic: 'Микроволновые печи', pov: 'Варочные поверхности', vit: 'Вытяжные шкафы', moi: 'Мойки и смесители', hol: 'Холодильники', pos: 'Посудомоечные машины', shk: 'Винные шкафы', str: 'Стиральные машины'}
+            each val, key in tech
+                a.col-6.col-xl.d-flex.text-decoration-none.text-body.align-items-center(href='#')
+                    svg(width='53' height='53' class=key)
+                        use(href='#icon-category-' + key)
+                    span.pl-3 #{val}
+            a.col-6.col-xl.d-flex.text-decoration-none.text-body.align-items-center.border-secondary(href='#')
+                span.btn-line.btn-line-secondary Посмотреть все
+
+block footer
+    include ../partials/icons-main-page
+
 

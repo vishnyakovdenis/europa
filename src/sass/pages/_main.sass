@@ -7,3 +7,38 @@
       bottom: auto
       top: 50%
       transform: translateY(-50%)
+
+.main-category
+  &-small
+    @include media-breakpoint-up(xl)
+      .bg-cover
+        padding-top: 120%
+  &-big
+    @include media-breakpoint-up(xl)
+      .bg-cover
+        padding-top: 70%
+  &-medium
+    @include media-breakpoint-down(md)
+      order: 1
+  a:hover
+    color: $primary !important
+
+.main-builtin-tech
+  a
+    padding: 40px 50px
+    border: 1px solid #E0E0E0
+    margin: -1px 0 0 -1px
+
+    &:hover
+      color: $secondary !important
+
+    @include media-breakpoint-up(xl)
+    flex: calc(100% / 5)
+    max-width: calc(100% / 5)
+
+  .mic
+    transform: scale(1.5) translateX(-4px)
+
+  .pos
+    transform: scale(1.15) translateX(-3px)
+
