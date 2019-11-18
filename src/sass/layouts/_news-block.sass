@@ -1,0 +1,14 @@
+.news-block
+  .news-block-title
+    border-width: 2px !important
+  &-item
+    > *:not(:first-child)
+      padding: 0 30px 0 50px
+    > :first-child
+      margin-left: -1px
+    @include media-breakpoint-up(xl)
+      margin-left: -1px
+      border: 1px solid #E0E0E0
+      padding: 0 35px 45px 0 !important
+  &-items
+    max-width: calc(100% - 30px)

@@ -2,8 +2,40 @@
   background-size: cover
   background-position: center
 
+.body-line-height
+  line-height: $line-height-base !important
+
+.flip
+  transform: scale(-1)
+  transform-origin: center
+
+.primary-color-on-hover:hover
+  color: $primary !important
+
+.secondary-color-on-hover:hover
+  color: $secondary !important
+
 .ar
   &-1-1
     padding-top: 100%
+  &-1-2
+    padding-top: 200%
   &-2-1
     padding-top: 50%
+  &-4-3
+    padding-top: 75%
+  &-4-5
+    padding-top: 110%
+
+@include media-breakpoint-up(xl)
+  .ar
+    &-1-1-xl
+      padding-top: 100%
+    &-1-2-xl
+      padding-top: 200%
+    &-2-1-xl
+      padding-top: 50%
+    &-4-3-xl
+      padding-top: 75%
+    &-4-5-xl
+      padding-top: 110%

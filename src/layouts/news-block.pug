@@ -1,0 +1,18 @@
+mixin newsBlock(type, hasTitle=false)
+    .row.news-block.justify-content-center
+        if hasTitle
+            .col-auto
+                h2.text-uppercase.font-weight-bold.m-0 Полезные статьи
+            .col-auto.ml-auto
+                a.btn-line.btn-line-secondary(href='#') Открыть все статьи
+        .row.no-gutters.mt-4.pt-3.news-block-items
+            - for(x = 0; x < 3; x++) {
+            .col-12.col-xl-4.news-block-item
+                a.bg-cover.ar-2-1.d-block(href='#' style='background-image: url(img/kitchen.jpg)')
+                a.news-block-title.h3.mt-5.text-decoration-none.d-block.text-body.border-left(href='#' class={'primary-color-on-hover border-primary': type !== 'articles', 'secondary-color-on-hover border-secondary': type === 'articles'}) Экологичные материалы и забота о детях
+                if type !== 'articles'
+                    p.mt-4 Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!
+                div
+                    a.btn.mt-3(href='#' class={'btn-outline-primary': type !== 'articles', 'btn-outline-secondary': type === 'articles'}) Читать подробнее
+            - }
+

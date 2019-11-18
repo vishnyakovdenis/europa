@@ -1,5 +1,6 @@
 extends ../index
 include ../partials/main-category
+include ../layouts/news-block
 
 block variables
     - var pageTitle = 'Main'
@@ -22,7 +23,7 @@ block content
             + category('small', 'Детские', 'kitchen.jpg')
             + category('medium', 'Гостиные и спальни из Италии', 'kitchen.jpg')
             + category('small', 'Мебель для юр. лиц', 'kitchen.jpg')
-    .container.main-builtin-tech.mt-5.pt-5
+    .container.main-builtin-tech.main-gap
         .row
             .col-12
                 h2.text-uppercase.text-center.font-weight-bold.mb-5.mt-5 Встраиваемая техника
@@ -34,6 +35,57 @@ block content
                     span.pl-3 #{val}
             a.col-6.col-xl.d-flex.text-decoration-none.text-body.align-items-center.border-secondary(href='#')
                 span.btn-line.btn-line-secondary Посмотреть все
+
+    .container.main-gap
+        .row
+            .col-12.col-xl-5
+                h2.h1.offset-xl-1.p-0.col-xl-8 Добро пожаловать в салон мебели «Европа»
+                a.btn-line.offset-xl-1.mt-5(href='#') Подробнее
+                .bg-cover.ar-2-1.ar-4-5-xl.mr-xl-5.mt-5(style='background-image: url(img/kitchen.jpg)')
+            .col-12.col-xl-7
+                .row
+                    .col-12.mb-5
+                        .bg-cover.ar-2-1.ml-xl-5.d-none.d-xl-block(style='background-image: url(img/kitchen.jpg)')
+                    .col-12.col-xl-6.pr-xl-4.pt-xl-4
+                        p.h4.body-line-height.mb-4.pr-xl-3 Начиная с 2004 года компания «Европа» предлагает своим покупателям эксклюзивную и не уступающую лучшим мировым аналогам мебель в Хабаровске
+                    .col-12.col-xl-6.font-weight-light.mb-4.pt-4
+                        p Мы работаем как с частными лицами (огромный каталог выполненных заказов с ценами и комплектующими вы найдёте в соответствующих разделах), так и с юридическими лицами по всему Хабаровскому краю.
+                        p Благодаря собственному производству и широкому выбору импортных и отечественных комплектующих, наши специалисты подберут для вас или создадут мебель, подходящую под любой дизайн и бюджет.
+                    .col-6
+                        a.btn-line(href='#') Наши награды
+                    .col-6
+                        a.btn-line(href='#') Читать отзывы наших клиентов
+
+    .container.main-gap
+        .row.justify-content-between.align-items-baseline
+            .col-12.col-xl-auto
+                h2.text-uppercase.font-weight-bold.m-0 Наши партнеры
+            .col-auto.mt-4.mt-xl-0.partners-slider-nav-wrapper
+                .partners-slider-nav.d-flex.align-items-center
+                    button.btn.btn-link.text-body.px-3.primary-color-on-hover(type='button')
+                        svg(width='7' height='15').flip
+                            use(href='#icon-angle')
+                    div
+                    button.btn.btn-link.text-body.px-3.primary-color-on-hover(type='button')
+                        svg(width='7' height='15')
+                            use(href='#icon-angle')
+            .col-12.mt-4
+                .swiper-container.partners-slider
+                    .swiper-wrapper
+                        - for(x = 0; x < 9; x++) {
+                        .swiper-slide
+                            .d-flex.align-items-center.h-100.justify-content-center
+                                img(src='img/kitchen.jpg')
+                        - }
+
+    .container.main-gap
+        + newsBlock('news')
+
+    .container.main-gap
+        + newsBlock('articles', true)
+
+
+
 
 block footer
     include ../partials/icons-main-page
