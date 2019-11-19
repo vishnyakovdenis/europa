@@ -48,7 +48,7 @@ block content
                         .bg-cover.ar-2-1.ml-xl-5.d-none.d-xl-block(style='background-image: url(img/kitchen.jpg)')
                     .col-12.col-xl-6.pr-xl-4.pt-xl-4
                         p.h4.body-line-height.mb-4.pr-xl-3 Начиная с 2004 года компания «Европа» предлагает своим покупателям эксклюзивную и не уступающую лучшим мировым аналогам мебель в Хабаровске
-                    .col-12.col-xl-6.font-weight-light.mb-4.pt-4
+                    .col-12.col-xl-6.font-weight-light.mb-4.pt-4.big-line-height
                         p Мы работаем как с частными лицами (огромный каталог выполненных заказов с ценами и комплектующими вы найдёте в соответствующих разделах), так и с юридическими лицами по всему Хабаровскому краю.
                         p Благодаря собственному производству и широкому выбору импортных и отечественных комплектующих, наши специалисты подберут для вас или создадут мебель, подходящую под любой дизайн и бюджет.
                     .col-6
@@ -78,11 +78,10 @@ block content
                                 img(src='img/kitchen.jpg')
                         - }
 
-    .container.main-gap
-        + newsBlock('news')
 
-    .container.main-gap
-        + newsBlock('articles', true)
+    + newsBlock('news')
+    include ../partials/show-room
+    + newsBlock('articles', true, true)
 
 
 
