@@ -1,5 +1,7 @@
 body
   letter-spacing: .1px
+  @include media-breakpoint-up(xl)
+    font-size: 14px
 
 svg
   display: block
@@ -10,6 +12,36 @@ img
 
 a
   transition: .2s
+
+h6,
+.h6
+  @include media-breakpoint-down(xl)
+    font-size: 12px !important
+
+h5,
+.h5
+  @include media-breakpoint-down(xl)
+    font-size: 16px !important
+
+h4,
+.h4
+  @include media-breakpoint-down(xl)
+    font-size: 16px !important
+
+h3,
+.h3
+  @include media-breakpoint-down(xl)
+    font-size: 18px !important
+
+h2,
+.h2
+  @include media-breakpoint-down(xl)
+    font-size: 22px !important
+
+h1,
+.h1
+  @include media-breakpoint-down(xl)
+    font-size: 22px !important
 
 .btn-outline
   &-primary,
@@ -30,7 +62,7 @@ ul.sub-menu
   display: block
   position: relative
   color: $body-color
-  font-weight: $font-weight-bold
+  font-weight: $font-weight-bold !important
   font-size: 12px
   text-decoration: none
 

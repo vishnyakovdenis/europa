@@ -1,12 +1,20 @@
 .main-slider
+  h2
+    font-size: 22px
+    @include media-breakpoint-up(xl)
+      font-size: 42px
+
   .swiper-pagination
     @include media-breakpoint-up(xl)
       width: 10px
-      right: 30px
+      right: 50px
       left: auto
       bottom: auto
       top: 50%
       transform: translateY(-50%)
+
+      span
+        margin: 10px 0 !important
 
 .main-gap
   margin-top: 100px
@@ -21,7 +29,8 @@
   &-big
     @include media-breakpoint-up(xl)
       .bg-cover
-        padding-top: 70%
+        padding-top: 320px
+        width: 435px
   &-medium
     @include media-breakpoint-down(md)
       order: 1
@@ -30,7 +39,7 @@
 
 .main-builtin-tech
   a
-    padding: 40px 50px
+    padding: 22px 25px
     border: 1px solid #E0E0E0
     margin: -1px 0 0 -1px
 
@@ -38,11 +47,12 @@
       color: $secondary !important
 
     @include media-breakpoint-up(xl)
+      padding: 43px 50px
       flex: calc(100% / 5)
       max-width: calc(100% / 5)
 
       .mic
-        transform: scale(1.5) translateX(-4px)
+        transform: scale(1.2) translateX(-4px)
 
       .pos
         transform: scale(1.15) translateX(-3px)
@@ -54,12 +64,14 @@
   img
     transition: .3s
     filter: grayscale(1)
+    max-width: 140px
+    opacity: .6
 
     @include media-breakpoint-down(md)
-      height: 100%
       width: auto
     &:hover
       filter: grayscale(0)
+      opacity: 1
   .swiper-slide
     @include media-breakpoint-down(md)
       height: calc((100% - 30px) / 2)

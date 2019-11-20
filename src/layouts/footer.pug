@@ -3,19 +3,18 @@ footer#footer
     .footer-top.bg-dark.py-5.main-gap
         .container.py-xl-3
             .row
-                .col-12.col-xl-2
+                .col-12.col-xl-2.mt-2
                     img.footer-logo(src='img/logo.png')
-                    p.text-muted.mt-4 Мебельная фабрика европейского уровня в Хабаровске!
+                    p.text-muted.mt-5 Мебельная фабрика европейского уровня в Хабаровске!
 
                 .col-3.d-none.d-xl-block.pl-4
                     ul.list-unstyled
-                        - for (var x = 1; x < 5; x++) {
-                        li.menu-item
-                            a.nav-link.text-decoration-none.text-light(href="#") Menu item #{x}
-                        - }
+                        each val in ['Вакансии', 'Предложения для дизайнеров', 'Документы и сертификаты', 'Жалобы и предложения']
+                            li.menu-item
+                                a.nav-link.text-decoration-none.text-light.px-0.py-2.my-1(href="#")= val
 
-                .col-12.col-xl-3.mt-4.mt-xl-0
-                    p.text-white.h5.mb-3 Подпишитесь, чтобы всегда быть в курсе новых акций и скидок
+                .col-12.col-xl-auto.mt-4.mt-xl-0.footer-sub
+                    h6.text-white.mb-3.medium-line-height.mt-2 Подпишитесь, чтобы всегда быть в курсе новых акций и скидок
                     form.d-flex.footer-subscription
                         input.form-control.bg-dark.border-right-0(type='email' placeholder='E-mail')
                         input.btn.btn-outline-primary.text-white(type='submit' value='Подписаться')
@@ -24,8 +23,8 @@ footer#footer
                 .col-12.col-xl-2.mt-5.ml-auto.mt-xl-0
                     .row.align-items-start
                         .col-8.col-xl-12
-                            a.text-white.h4.d-flex(href='tel:+74212516430') +7 (4212) 51-64-30
-                            a.text-secondary.h5.d-flex(href='mailto:salon@europakhv.ru') salon@europakhv.ru
+                            a.text-white.h5.d-flex.mt-2(href='tel:+74212516430') +7 (4212) 51-64-30
+                            a.text-secondary.h6.d-flex(href='mailto:salon@europakhv.ru') salon@europakhv.ru
                             button.btn.btn-block.btn-outline-secondary.mb-3.mt-4.text-white(type='button' data-toggle='modal' data-target='#call-me') Заказать звонок
                         .col-4.col-xl-12.justify-content-end.d-flex.align-items-center.justify-content-xl-start
                             a.text-secondary.text-decoration-none(href='#')

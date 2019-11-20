@@ -15,51 +15,51 @@ block content
                 - }
             .swiper-pagination
 
-    .container
-        .row.mt-5.pt-5
-            + category('big', 'Шкафы', 'kitchen.jpg')
-            + category('big', 'Кухни', 'kitchen.jpg')
+    .container.pt-1
+        .row.mt-5.pt-5.pb-2
+            + category('big', 'Шкафы', 'image-1.png', ['Угловые шкафы', 'Распашные шкафы', 'Гардеробные', 'Шкафы-купе', 'Радиусные шкафы'])
+            + category('big', 'Кухни', 'kitchen.jpg', ['Кухонные гарнитуры', 'Обеденные зоны', 'Барные стойки'])
         .row.mt-5.pt-4
-            + category('small', 'Детские', 'kitchen.jpg')
-            + category('medium', 'Гостиные и спальни из Италии', 'kitchen.jpg')
-            + category('small', 'Мебель для юр. лиц', 'kitchen.jpg')
+            + category('small', 'Детские', 'image-3.png', ['Детские под заказ', 'Кровати', 'Шкафы', 'Столы'])
+            + category('medium', 'Гостиные и спальни из Италии', 'image-2.png')
+            + category('small', 'Мебель для <br>юр. лиц', 'image-6.png', ['Офисная мебель', 'Торговое оборудование', 'Корпусная мебель'])
     .container.main-builtin-tech.main-gap
-        .row
-            .col-12
-                h2.text-uppercase.text-center.font-weight-bold.mb-5.mt-5 Встраиваемая техника
+        .row.w-100.mx-auto
+            .col-12.mb-3.px-0
+                h3.text-uppercase.text-xl-center.font-weight-bold.mb-xl-5.mt-5 Встраиваемая техника
             - var tech = {duh: 'Духовые шкафы', mic: 'Микроволновые печи', pov: 'Варочные поверхности', vit: 'Вытяжные шкафы', moi: 'Мойки и смесители', hol: 'Холодильники', pos: 'Посудомоечные машины', shk: 'Винные шкафы', str: 'Стиральные машины'}
             each val, key in tech
-                a.col-6.col-xl.d-flex.text-decoration-none.text-body.align-items-center(href='#')
+                a.col-6.col-xl.text-decoration-none.text-body.align-items-center.d-xl-flex(href='#')
                     svg(width='53' height='53' class=key)
                         use(href='#icon-category-' + key)
-                    span.pl-3 #{val}
+                    .pt-2.pt-xl-0.pl-xl-3 #{val}
             a.col-6.col-xl.d-flex.text-decoration-none.text-body.align-items-center.border-secondary(href='#')
-                span.btn-line.btn-line-secondary Посмотреть все
+                span.btn-line.btn-line-secondary.h6 Посмотреть все
 
     .container.main-gap
         .row
             .col-12.col-xl-5
-                h2.h1.offset-xl-1.p-0.col-xl-8 Добро пожаловать в салон мебели «Европа»
-                a.btn-line.offset-xl-1.mt-5(href='#') Подробнее
-                .bg-cover.ar-2-1.ar-4-5-xl.mr-xl-5.mt-5(style='background-image: url(img/kitchen.jpg)')
+                h2.h1.offset-xl-2.p-0.col-9.mt-3.pb-3 Добро пожаловать в салон мебели «Европа»
+                a.btn-line.offset-xl-2.mt-xl-5.h6.pb-4(href='#') Подробнее
+                .bg-cover.ar-2-1.ar-4-5-xl.mr-xl-5.mt-xl-5(style='background-image: url(img/image-4.png)')
             .col-12.col-xl-7
                 .row
                     .col-12.mb-5
-                        .bg-cover.ar-2-1.ml-xl-5.d-none.d-xl-block(style='background-image: url(img/kitchen.jpg)')
-                    .col-12.col-xl-6.pr-xl-4.pt-xl-4
-                        p.h4.body-line-height.mb-4.pr-xl-3 Начиная с 2004 года компания «Европа» предлагает своим покупателям эксклюзивную и не уступающую лучшим мировым аналогам мебель в Хабаровске
-                    .col-12.col-xl-6.font-weight-light.mb-4.pt-4.big-line-height
-                        p Мы работаем как с частными лицами (огромный каталог выполненных заказов с ценами и комплектующими вы найдёте в соответствующих разделах), так и с юридическими лицами по всему Хабаровскому краю.
+                        .bg-cover.ar-5-3.ml-xl-5.d-none.d-xl-block(style='background-image: url(img/image-5.png)')
+                    .col-12.col-xl-5.pt-xl-4
+                        p.h6.mb-4.mr-xl-4.big-line-height.mt-xl-2 Начиная с 2004 года компания «Европа» предлагает своим покупателям эксклюзивную и не уступающую лучшим мировым аналогам мебель в Хабаровске
+                    .col-12.col-xl-7.font-weight-light.mb-5.pt-xl-4.big-line-height.pl-xl-5.pr-xl-4.mt-xl-3
+                        p.mb-3.pb-1 Мы работаем как с частными лицами (огромный каталог выполненных заказов с ценами и комплектующими вы найдёте в соответствующих разделах), так и с юридическими лицами по всему Хабаровскому краю.
                         p Благодаря собственному производству и широкому выбору импортных и отечественных комплектующих, наши специалисты подберут для вас или создадут мебель, подходящую под любой дизайн и бюджет.
-                    .col-6
-                        a.btn-line(href='#') Наши награды
-                    .col-6
-                        a.btn-line(href='#') Читать отзывы наших клиентов
+                    .col-6.col-xl-5
+                        a.btn-line.h6(href='#') Наши награды
+                    .col-6.pl-xl-5
+                        a.btn-line.h6(href='#') Читать отзывы наших клиентов
 
     .container.main-gap
         .row.justify-content-between.align-items-baseline
             .col-12.col-xl-auto
-                h2.text-uppercase.font-weight-bold.m-0 Наши партнеры
+                h3.text-uppercase.font-weight-bold.m-0 Наши партнеры
             .col-auto.mt-4.mt-xl-0.partners-slider-nav-wrapper
                 .partners-slider-nav.d-flex.align-items-center
                     button.btn.btn-link.text-body.px-3.primary-color-on-hover(type='button')
@@ -69,22 +69,19 @@ block content
                     button.btn.btn-link.text-body.px-3.primary-color-on-hover(type='button')
                         svg(width='7' height='15')
                             use(href='#icon-angle')
-            .col-12.mt-4
+            .col-12.mt-xl-5.pt-4
                 .swiper-container.partners-slider
                     .swiper-wrapper
                         - for(x = 0; x < 9; x++) {
                         .swiper-slide
                             .d-flex.align-items-center.h-100.justify-content-center
-                                img(src='img/kitchen.jpg')
+                                img(src='img/logo2.png')
                         - }
 
 
     + newsBlock('news')
     include ../partials/show-room
     + newsBlock('articles', true, true)
-
-
-
 
 block footer
     include ../partials/icons-main-page
