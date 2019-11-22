@@ -34,7 +34,11 @@
                     <use href="#icon-search"></use>
                   </svg></i>
                 <input class="form-control border-0 text-white" type="search" placeholder="Поиск">
-                <input class="btn btn-primary border-0 position-absolute h-100" type="submit" value="Поиск">
+                <button class="btn btn-primary border-0 position-absolute h-100" type="submit">
+                  <svg width="12" height="12">
+                    <use href="#icon-search"></use>
+                  </svg>
+                </button>
               </form>
             </div>
           </div>
@@ -480,10 +484,10 @@
             </div>
             <div class="col-3 d-none d-xl-block pl-4">
               <ul class="list-unstyled">
-                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1" href="#">Вакансии</a></li>
-                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1" href="#">Предложения для дизайнеров</a></li>
-                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1" href="#">Документы и сертификаты</a></li>
-                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1" href="#">Жалобы и предложения</a></li>
+                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1 primary-color-on-hover" href="#">Вакансии</a></li>
+                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1 primary-color-on-hover" href="#">Предложения для дизайнеров</a></li>
+                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1 primary-color-on-hover" href="#">Документы и сертификаты</a></li>
+                <li class="menu-item"><a class="nav-link text-decoration-none text-light px-0 py-2 my-1 primary-color-on-hover" href="#">Жалобы и предложения</a></li>
               </ul>
             </div>
             <div class="col-12 col-xl-auto mt-4 mt-xl-0 footer-sub">
@@ -492,17 +496,17 @@
                 <input class="form-control bg-dark border-right-0" type="email" placeholder="E-mail">
                 <input class="btn btn-outline-primary text-white" type="submit" value="Подписаться">
               </form>
-              <p class="text-muted small mt-3">Нажимая кнопку Подписаться, я принимаю политику <a href="#">конфиденциальности</a></p>
+              <p class="text-muted small mt-3">Нажимая кнопку Подписаться, я принимаю политику <a href="#" class="secondary-color-on-hover">конфиденциальности</a></p>
             </div>
             <div class="col-12 col-xl-2 mt-5 ml-auto mt-xl-0">
               <div class="row align-items-start">
                 <div class="col-8 col-xl-12"><a class="text-white h5 d-flex mt-2" href="tel:+74212516430">+7 (4212) 51-64-30</a><a class="text-secondary h6 d-flex" href="mailto:salon@europakhv.ru">salon@europakhv.ru</a>
                   <button class="btn btn-block btn-outline-secondary mb-3 mt-4 text-white" type="button" data-toggle="modal" data-target="#call-me">Заказать звонок</button>
                 </div>
-                <div class="col-4 col-xl-12 justify-content-end d-flex align-items-center justify-content-xl-start"><a class="text-secondary text-decoration-none" href="#">
+                <div class="col-4 col-xl-12 justify-content-end d-flex align-items-center justify-content-xl-start"><a class="text-secondary text-decoration-none primary-color-on-hover" href="#">
                     <svg width="25" height="25">
                       <use href="#icon-vk"></use>
-                    </svg></a><a class="text-secondary text-decoration-none ml-3" href="#">
+                    </svg></a><a class="text-secondary text-decoration-none ml-3 primary-color-on-hover" href="#">
                     <svg width="19" height="19">
                       <use href="#icon-insta"></use>
                     </svg></a></div>
@@ -582,6 +586,13 @@
       <symbol id="icon-pointer" viewbox="0 0 12 16">
         <path d="M6 0C2.89838 0 0.375 2.52338 0.375 5.625C0.375 6.67294 0.665281 7.69563 1.21466 8.58288L5.67981 15.7784C5.76534 15.9163 5.91603 16 6.07809 16C6.07934 16 6.08056 16 6.08181 16C6.24528 15.9987 6.39628 15.9124 6.48025 15.7721L10.8316 8.50688C11.3507 7.63838 11.625 6.64184 11.625 5.625C11.625 2.52338 9.10163 0 6 0ZM10.0271 8.02556L6.071 14.6308L2.01147 8.08894C1.55419 7.35044 1.30625 6.49844 1.30625 5.625C1.30625 3.04031 3.41531 0.93125 6 0.93125C8.58469 0.93125 10.6906 3.04031 10.6906 5.625C10.6906 6.47253 10.459 7.30275 10.0271 8.02556Z" fill="#64AC2C"></path>
         <path d="M6 2.8125C4.44919 2.8125 3.1875 4.07419 3.1875 5.625C3.1875 7.16591 4.42866 8.4375 6 8.4375C7.59072 8.4375 8.8125 7.14897 8.8125 5.625C8.8125 4.07419 7.55081 2.8125 6 2.8125ZM6 7.50625C4.96072 7.50625 4.11875 6.66147 4.11875 5.625C4.11875 4.59113 4.96613 3.74375 6 3.74375C7.03387 3.74375 7.87813 4.59113 7.87813 5.625C7.87813 6.64634 7.05575 7.50625 6 7.50625Z" fill="#64AC2C"></path>
+      </symbol>
+      <symbol id="icon-small-home" viewbox="0 0 8 11" fill="currentColor">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75442 0.0861741C3.89887 -0.0287247 4.10113 -0.0287247 4.24558 0.0861741L7.84558 2.94981C7.94301 3.02732 8 3.14649 8 3.27273V7.77273C8 8.09822 7.87357 8.41038 7.64853 8.64054C7.42348 8.8707 7.11826 9 6.8 9H1.2C0.88174 9 0.576515 8.8707 0.351472 8.64054C0.126428 8.41038 0 8.09822 0 7.77273V3.27273C0 3.14649 0.0569891 3.02732 0.154424 2.94981L3.75442 0.0861741ZM0.8 3.47281V7.77273C0.8 7.88123 0.842143 7.98528 0.917157 8.062C0.992172 8.13872 1.09391 8.18182 1.2 8.18182H6.8C6.90609 8.18182 7.00783 8.13872 7.08284 8.062C7.15786 7.98528 7.2 7.88122 7.2 7.77273V3.47281L4 0.927352L0.8 3.47281Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.4 4.5C2.4 4.27407 2.57909 4.09091 2.8 4.09091H5.2C5.42091 4.09091 5.6 4.27407 5.6 4.5V8.59091C5.6 8.81684 5.42091 9 5.2 9C4.97909 9 4.8 8.81684 4.8 8.59091V4.90909H3.2V8.59091C3.2 8.81684 3.02091 9 2.8 9C2.57909 9 2.4 8.81684 2.4 8.59091V4.5Z"></path>
+      </symbol>
+      <symbol id="icon-ruble" viewbox="0 0 15 22" fill="currentColor">
+        <path d="M1.85909 11.119H0.371094V13.413H1.85909V16.017H0.371094V18.311H1.85909V22H4.86609V18.311H10.6631V16.017H4.86609V13.382H6.16809C12.8641 13.382 14.0731 9.941 14.0731 6.562C14.0731 3.524 12.3061 0.671997 7.16009 0.671997C4.46309 0.671997 1.85909 1.106 1.85909 1.106V11.119ZM10.9421 6.965C10.9421 9.321 9.88809 11.119 6.10609 11.119H4.86609V3.245C4.86609 3.245 5.95109 2.966 6.97409 2.966C9.88809 2.966 10.9421 4.671 10.9421 6.965Z"></path>
         <svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
           <symbol id="icon-category-duh" viewbox="0 0 43 43" fill="currentColor">
             <path d="M41.6562 4.03125H1.34375C1.16556 4.03125 0.994664 4.10204 0.868663 4.22804C0.742662 4.35404 0.671875 4.52493 0.671875 4.70312V36.9531C0.671875 37.1313 0.742662 37.3022 0.868663 37.4282C0.994664 37.5542 1.16556 37.625 1.34375 37.625H2.01562V38.9688C2.01562 39.1469 2.08641 39.3178 2.21241 39.4438C2.33841 39.5698 2.50931 39.6406 2.6875 39.6406H40.3125C40.4907 39.6406 40.6616 39.5698 40.7876 39.4438C40.9136 39.3178 40.9844 39.1469 40.9844 38.9688V37.625H41.6562C41.8344 37.625 42.0053 37.5542 42.1313 37.4282C42.2573 37.3022 42.3281 37.1313 42.3281 36.9531V4.70312C42.3281 4.52493 42.2573 4.35404 42.1313 4.22804C42.0053 4.10204 41.8344 4.03125 41.6562 4.03125ZM2.01562 5.375H40.9844V13.4375H2.01562V5.375ZM39.6406 38.2969H3.35938V37.625H39.6406V38.2969ZM40.9844 36.2812H2.01562V14.7812H40.9844V36.2812Z" fill="#64AC2C"></path>

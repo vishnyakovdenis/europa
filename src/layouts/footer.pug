@@ -11,14 +11,14 @@ footer#footer
                     ul.list-unstyled
                         each val in ['Вакансии', 'Предложения для дизайнеров', 'Документы и сертификаты', 'Жалобы и предложения']
                             li.menu-item
-                                a.nav-link.text-decoration-none.text-light.px-0.py-2.my-1(href="#")= val
+                                a.nav-link.text-decoration-none.text-light.px-0.py-2.my-1.primary-color-on-hover(href="#")= val
 
                 .col-12.col-xl-auto.mt-4.mt-xl-0.footer-sub
                     h6.text-white.mb-3.medium-line-height.mt-2 Подпишитесь, чтобы всегда быть в курсе новых акций и скидок
                     form.d-flex.footer-subscription
                         input.form-control.bg-dark.border-right-0(type='email' placeholder='E-mail')
                         input.btn.btn-outline-primary.text-white(type='submit' value='Подписаться')
-                    p.text-muted.small.mt-3 Нажимая кнопку Подписаться, я принимаю политику <a href="#">конфиденциальности</a>
+                    p.text-muted.small.mt-3 Нажимая кнопку Подписаться, я принимаю политику <a href="#" class="secondary-color-on-hover">конфиденциальности</a>
 
                 .col-12.col-xl-2.mt-5.ml-auto.mt-xl-0
                     .row.align-items-start
@@ -27,10 +27,10 @@ footer#footer
                             a.text-secondary.h6.d-flex(href='mailto:salon@europakhv.ru') salon@europakhv.ru
                             button.btn.btn-block.btn-outline-secondary.mb-3.mt-4.text-white(type='button' data-toggle='modal' data-target='#call-me') Заказать звонок
                         .col-4.col-xl-12.justify-content-end.d-flex.align-items-center.justify-content-xl-start
-                            a.text-secondary.text-decoration-none(href='#')
+                            a.text-secondary.text-decoration-none.primary-color-on-hover(href='#')
                                 svg(width='25' height='25')
                                     use(href='#icon-vk')
-                            a.text-secondary.text-decoration-none.ml-3(href='#')
+                            a.text-secondary.text-decoration-none.ml-3.primary-color-on-hover(href='#')
                                 svg(width='19' height='19')
                                     use(href='#icon-insta')
 

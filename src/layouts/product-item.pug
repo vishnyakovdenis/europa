@@ -1,0 +1,27 @@
+mixin product-item()
+    .container.product-item.mt-5
+        .row
+            .col-6.pr-0
+                .product-item-data
+                    h4 Кухня в классическом стиле
+                    h3.text-primary.d-flex.align-items-center
+                        span.pr-1.font-weight-bold 215 000
+                        svg(width='15' height='22')
+                            use(href='#icon-ruble' xlink:href='#icon-ruble')
+                    .product-item-attr.pt-4
+                        .row.mb-2.pb-1
+                            .col-auto.product-item-attr-name Адрес
+                            .col.product-item-attr-value.product-item-attr-value--big ул. Беломорская, 67
+                        .row.mb-2.pb-1
+                            .col-auto.product-item-attr-name Размеры
+                            .col.product-item-attr-value.product-item-attr-value--big 2,75 x 2,5 м
+                        .row.mb-2.pb-1.mt-4
+                            .col-auto.product-item-attr-name Фасады
+                            .col.product-item-attr-value.font-weight-light МДФ эмаль глянец / ЛДСП
+                        .row.mb-2.pb-1
+                            .col-auto.product-item-attr-name Столешница
+                            .col.product-item-attr-value.font-weight-light Акриловый камень Staron
+                        .row.mb-2.pb-1
+                            .col-auto.product-item-attr-name Фурнитура
+                            .col.product-item-attr-value.font-weight-light Grass, Австралия
+            .col-6.bg-cover(style='background-image: url(img/product-1.png)')

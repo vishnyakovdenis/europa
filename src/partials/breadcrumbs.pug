@@ -1,0 +1,16 @@
+mixin breadcrumbs(navigation=[])
+    .container.py-4
+        nav.nav.align-items-center.small.breadcrumbs
+            a.d-flex.align-items-center(href='#')
+                svg.mr-2(width='13' height='13')
+                    use(href='#icon-small-home')
+                span Главная
+            .sep.mx-3
+                svg(width='5' height='7')
+                    use(href='#icon-angle')
+            each nav, index in navigation
+                a.d-flex.align-items-center(href='#')= nav
+                if index !== navigation.length - 1
+                    .sep.mx-3
+                        svg(width='5' height='7')
+                            use(href='#icon-angle')

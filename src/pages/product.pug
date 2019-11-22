@@ -1,0 +1,33 @@
+extends ../index
+include ../partials/breadcrumbs
+include ../layouts/product-item
+
+block variables
+    - var pageTitle = 'Product'
+
+block content
+    + breadcrumbs(['Кухни под ключ', 'Кухня в классическом стиле'])
+
+    .container.p-0.px-xl-3
+        .swiper-container.product-slider
+            .swiper-wrapper
+                - for(x = 0; x < 3; x++) {
+                .swiper-slide
+                    .product-slider-block.bg-cover.h-100(style='background-image: url(img/product-1.png)')
+                - }
+            .product-slider-nav.product-slider-nav--left.d-flex.position-absolute.align-items-center.justify-content-center.flip
+                svg(width='10' height='20')
+                    use(href='#icon-angle')
+            .product-slider-nav.product-slider-nav--right.d-flex.position-absolute.align-items-center.justify-content-center
+                svg(width='10' height='20')
+                    use(href='#icon-angle')
+
+    .container
+        .row.justify-content-center
+            .col-12.col-xl-5.text-center.p-5.bg-white.product-title-block.position-relative
+                h1.h4 Кухня в классическом стиле
+                .sep-primary.my-3
+                p.col-7.mx-auto Идеальное соотношение элегантности и функциональности
+                .product-slider-pagination.d-flex.align-items-center.justify-content-center.mt-5
+
+    + product-item()
