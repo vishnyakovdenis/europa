@@ -1,0 +1,33 @@
+.feature
+  box-shadow: 0 0 0 1px inset #E0E0E0
+  &-image
+    min-height: 300px
+
+  &-data
+    padding: 60px 0
+    p
+      line-height: 170% !important
+
+    a
+      margin-left: 60px
+
+    @include media-breakpoint-up(xl)
+      &-text > *
+        max-width: 430px
+    &-text
+      padding: 0 0 0 60px
+      border-left: 2px solid $secondary
+
+
+  .row:not(.flex-xl-row-reverse)
+    @include media-breakpoint-up(xl)
+      a
+        margin: 0
+      .feature-data
+        padding: 60px 0 60px 30px
+        &-text
+          padding: 0 60px 0 0
+          border-right: 2px solid $secondary
+          border-left: 0
+
+

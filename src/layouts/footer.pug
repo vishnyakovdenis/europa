@@ -11,14 +11,14 @@ footer#footer
                     ul.list-unstyled
                         each val in ['Вакансии', 'Предложения для дизайнеров', 'Документы и сертификаты', 'Жалобы и предложения']
                             li.menu-item
-                                a.nav-link.text-decoration-none.text-light.px-0.py-2.my-1.primary-color-on-hover(href="#")= val
+                                a.nav-link.text-decoration-none.text-light.px-0.py-2.my-2.primary-color-on-hover(href="#")= val
 
                 .col-12.col-xl-auto.mt-4.mt-xl-0.footer-sub
                     h6.text-white.mb-3.medium-line-height.mt-2 Подпишитесь, чтобы всегда быть в курсе новых акций и скидок
                     form.d-flex.footer-subscription
                         input.form-control.bg-dark.border-right-0(type='email' placeholder='E-mail')
                         input.btn.btn-outline-primary.text-white(type='submit' value='Подписаться')
-                    p.text-muted.small.mt-3 Нажимая кнопку Подписаться, я принимаю политику <a href="#" class="secondary-color-on-hover">конфиденциальности</a>
+                    p.text-muted.small.mt-3 Нажимая кнопку Подписаться, я принимаю политику <a href="#" class="secondary-color-on-hover text-decoration-none">конфиденциальности</a>
 
                 .col-12.col-xl-2.mt-5.ml-auto.mt-xl-0
                     .row.align-items-start
@@ -34,15 +34,15 @@ footer#footer
                                 svg(width='19' height='19')
                                     use(href='#icon-insta')
 
-    .footer-bottom.bg-black.text-muted.py-4
+    .footer-bottom.bg-black.font-weight-light
         .container
             .row
                 .col-12.col-xl-5
                     | © Европа, салон мебели 2005-2019
                 .col-12.col-xl-3.py-3.py-xl-0
-                    a.text-muted(href="#") Политика конфиденциальности
+                    a.secondary-color-on-hover.text-decoration-none(href="#") Политика конфиденциальности
                 .col-12.col-xl-3.ml-auto.text-xl-right
-                    a(href="#").text-secondary Digital-маркетинг - front-view.ru
+                    a(href="#").text-secondary.primary-color-on-hover.text-decoration-none Digital-маркетинг - front-view.ru
 
 
 include ../partials/modals

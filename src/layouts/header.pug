@@ -21,11 +21,11 @@ header#header.position-relative
                             use(href='#icon-insta')
                 .col-auto
                     form.position-relative.d-flex.align-items-center
-                        i.position-absolute
+                        input.form-control.border-0.text-white(type='search' placeholder='Поиск')
+                        button.btn.btn-primary.border-0.position-absolute.p-0.d-flex.justify-content-center(type='submit')
                             svg(width='12' height='12')
                                 use(href='#icon-search')
-                        input.form-control.border-0.text-white(type='search' placeholder='Поиск')
-                        button.btn.btn-primary.border-0.position-absolute.h-100(type='submit')
+                        i.position-absolute
                             svg(width='12' height='12')
                                 use(href='#icon-search')
 

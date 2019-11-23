@@ -1,6 +1,8 @@
 extends ../index
 include ../partials/breadcrumbs
 include ../layouts/product-item
+include ../layouts/feature
+
 
 block variables
     - var pageTitle = 'Product'
@@ -31,3 +33,22 @@ block content
                 .product-slider-pagination.d-flex.align-items-center.justify-content-center.mt-5
 
     + product-item()
+
+    .container
+        .row.justify-content-center
+            .col-xl-10
+                .row.font-weight-light.big-line-height
+                    .col-xl-6
+                        p Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции играет важную роль в формировании форм развития. С другой стороны дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание соответствующий условий активизации.
+                    .col-xl-6
+                        p Таким образом консультация с широким активом позволяет выполнять важные задания по разработке форм развития. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий.
+                .row
+                    .col-xl-6
+                        a.btn.btn-primary.btn-block.btn-lg(href='#') Хочу такую кухню
+                    .col-xl-6
+                        a.btn.btn-outline-primary.btn-block.btn-lg(href='#') Рассчитать стоимость моей кухни
+
+    + feature('Безопасность для самых маленьких', 'Мамы могут быть спокойны: каждый выдвижной механизм безопасен для вашего ребёнка', 'feature-1.png', true)
+
+    .container
+        include ../partials/project-design-form

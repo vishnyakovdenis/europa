@@ -71,11 +71,16 @@
       color: #4F4F4F
     &:focus
       width: 310px
-      + .btn
+      padding-left: 25px
+      ~ .btn
         opacity: 1
         visibility: visible
 
+      ~ i
+        display: none
+
   form
+    height: 40px
     i
       color: #4F4F4F
       left: 20px
@@ -84,6 +89,10 @@
       opacity: 0
       visibility: hidden
       transition: .2s
+      width: 34px
+      height: 34px
+      &:hover
+        background: $primary !important
 
 .logo
   img

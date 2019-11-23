@@ -1,0 +1,16 @@
+mixin feature(title, text, img, reverse=false)
+    .container
+        .row.no-gutters
+            .col-12.feature
+                .row(class={'flex-xl-row-reverse': reverse === true})
+                    .col-xl-7
+                        .feature-image.bg-cover.h-100(style='background-image:url(img/' + img + ')')
+                    .col-xl-5
+                        .feature-data.d-flex.flex-column
+                            .feature-data-text
+                                h4= title
+                                p.h6.mt-4= text
+                            div
+                                a.btn.btn-outline-secondary.mt-5(href='#') Читать подробнее
+
+
