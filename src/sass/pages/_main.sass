@@ -22,6 +22,10 @@
     margin-top: 200px
 
 .main-category
+  &-row
+    @include media-breakpoint-up(xl)
+      .main-category:last-child
+        margin-left: -25px
   &-small
     @include media-breakpoint-up(xl)
       .bg-cover

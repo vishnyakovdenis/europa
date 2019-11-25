@@ -1,6 +1,7 @@
 .bg-cover
   background-size: cover
   background-position: center
+  background-repeat: no-repeat
 
 .body-line-height
   line-height: $line-height-base !important
@@ -26,9 +27,15 @@
   transform: scale(-1)
   transform-origin: center
 
+.btn:disabled
+  background: #BDBDBD
+  border-color: #BDBDBD
+
+.btn.primary-color-on-hover:hover,
 a.primary-color-on-hover:hover
   color: $primary !important
 
+.btn.secondary-color-on-hover:hover,
 a.secondary-color-on-hover:hover
   color: $secondary !important
 

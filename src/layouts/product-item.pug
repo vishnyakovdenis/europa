@@ -1,12 +1,14 @@
 mixin product-item()
     .container.product-item.mt-5
-        .row
-            .col-6.pr-0
+        .row.flex-xl-row-reverse
+            .col-xl-6.pl-xl-0
+                .bg-cover.h-100(style='background-image: url(img/product-1.png)')
+            .col-xl-6.pr-xl-0
                 .product-item-data
                     h4 Кухня в классическом стиле
                     h3.text-primary.d-flex.align-items-center
                         span.pr-1.font-weight-bold 215 000
-                        svg(width='15' height='22')
+                        svg(width='15' height='22').product-item-data-rub-symbol
                             use(href='#icon-ruble' xlink:href='#icon-ruble')
                     .product-item-attr.pt-4
                         .row.mb-2.pb-1
@@ -24,5 +26,3 @@ mixin product-item()
                         .row.mb-2.pb-1
                             .col-auto.product-item-attr-name Фурнитура
                             .col.product-item-attr-value.font-weight-light Grass, Австралия
-            .col-6.pl-xl-0
-                .bg-cover.h-100(style='background-image: url(img/product-1.png)')

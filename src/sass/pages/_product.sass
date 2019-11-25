@@ -1,5 +1,7 @@
 .product-slider
-  height: 600px
+  height: 350px
+  @include media-breakpoint-up(xl)
+    height: 600px
 
   &-nav
     width: 40px
@@ -40,3 +42,15 @@
   &-title-block
     z-index: 9
     margin-top: -110px
+
+  &-description
+    margin-top: 50px
+    margin-bottom: 70px
+    @include media-breakpoint-up(xl)
+      margin-top: 100px
+      margin-bottom: 150px
+
+  &-cta-form
+    margin-top: 80px
+    @include media-breakpoint-up(xl)
+      margin-top: 150px

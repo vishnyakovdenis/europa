@@ -1,14 +1,25 @@
 .product-item
   &-data
     border: 1px solid #E0E0E0
-    border-right: none
-    padding: 60px 80px
+    padding: 30px 20px
+    @include media-breakpoint-up(xl)
+      padding: 60px 80px
+      border-right: none
+    &-rub-symbol
+      @include media-breakpoint-down(xl)
+        width: 13px
+        height: 13px
+  .bg-cover
+    min-height: 200px
   &-attr
     &-name
-      width: 150px
+      width: 130px
+      @include media-breakpoint-up(xl)
+        width: 150px
       color: #828282
 
     &-value
       color: #1B1F21
       &--big
-        font-size: 18px
+        @include media-breakpoint-up(xl)
+          font-size: 18px
