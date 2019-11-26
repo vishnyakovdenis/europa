@@ -11,6 +11,12 @@ prodSlider && new Swiper(prodSlider, {
   pagination: {
     el: document.querySelector('.product-slider-pagination'),
     type: 'fraction',
+    formatFractionCurrent(number) {
+      return number < 10 ? `0${number}` : number
+    },
+    formatFractionTotal(number) {
+      return number < 10 ? `0${number}` : number
+    }
   },
 });
 

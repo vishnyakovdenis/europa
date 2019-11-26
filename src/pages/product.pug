@@ -52,3 +52,17 @@ block content
 
     .container.product-cta-form
         include ../partials/project-design-form
+
+    .container.product-nav
+        .row
+            .col-6.col-xl-auto.text-right
+                a.d-flex.text-decoration-none.primary-color-on-hover.text-body.align-items-center.h6(href='#')
+                    svg.flip.mr-4.text-primary(width='7' height='15')
+                        use(href='#icon-angle')
+                    span Вернуться к каталогу
+
+            .col-6.col-xl-auto.ml-auto.d-flex.justify-content-end
+                a.d-flex.text-decoration-none.primary-color-on-hover.text-body.align-items-center.h6(href='#')
+                    span Открыть следующий проект
+                    svg.ml-4.text-primary(width='7' height='15')
+                        use(href='#icon-angle')
