@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/modal';
+import 'bootstrap/js/dist/tab';
 import './pages/main';
 import './pages/product';
 

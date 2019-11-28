@@ -1,0 +1,66 @@
+extends ../index
+
+block variables
+    - var pageTitle = 'Category'
+
+block content
+    + breadcrumbs(['Кухни под ключ'])
+
+    .container
+        .row.mb-5.pb-5
+            .col-5.pr-xl-5
+                h1.mt-4 О КУХНЯХ САЛОНА МЕБЕЛИ «ЕВРОПА»
+                .sep-primary.my-4
+                h6.line-height-170.pr-xl-5 Кухни от салона мебели «Европа» – это многофункциональное, стильное и надёжное решение для вашего дома
+                p.big-line-height.font-weight-light.my-4.pr-xl-5 Мы воплощаем в жизнь самые смелые проекты кухонь, основываясь на стилистике Европейских брендов. А благодаря наличию собственного производства, мы делаем кухни доступными по цене, без потерь качества!
+                button.btn.btn-outline-primary.category-button Получить бесплатную консультацию <br>по подбору кухни
+            .col-7
+                .bg-cover.ar-2-1(style='background-image: url(img/cat-1.jpg)')
+                .d-flex.flex-wrap.no-gutters.align-items-center
+                    .col-5.position-relative.category-video-img-wrapper(data-toggle='modal' data-target='#cat-video')
+                        .bg-cover.category-video-img.ar-4-3(style='background-image: url(img/cat-2.jpg)')
+                            i.d-block
+                                svg(width='60' height='60')
+                                    use(href='#icon-play')
+                    .col-4.ml-5.small
+                        | Максим Скопич, основатель салона мебели «Европа», расскажет за 2 минуты, почему наши кухни остаются лучшими на рынке уже много лет подряд!
+
+        + promo('Акция "Осенний <br>обвал цен!"', 'Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!', 'slide-1.jpg')
+    .category-tabs
+        .container.mt-5.pt-5
+            ul.nav.nav-tabs.justify-content-between(role='tablist')
+                li.nav-item
+                    a#home-tab.nav-link.active.align-items-start.p-0(data-toggle='tab' href='#home')
+                        i.mr-4
+                            svg(width='37' height='30')
+                                use(href='#icon-book')
+                        span Посмотреть каталог <br>установленных кухонь
+                li.nav-item
+                    a#profile-tab.nav-link.justify-content-center.align-items-start.p-0(data-toggle='tab' href='#profile')
+                        i.mr-4
+                            svg(width='27' height='35')
+                                use(href='#icon-calculator')
+                        span Рассчитать стоимость <br>вашей кухни
+                li.nav-item
+                    a#messages-tab.nav-link.justify-content-center.align-items-start.p-0(data-toggle='tab' href='#messages')
+                        i.mr-4
+                            svg(width='31' height='33')
+                                use(href='#icon-oven')
+                        span Подробнее <br>о материалах
+                li.nav-item
+                    a#settings-tab.nav-link.justify-content-end.align-items-start.p-0(data-toggle='tab' href='#settings')
+                        i.mr-4
+                            svg(width='29' height='37')
+                                use(href='#icon-precision-compass')
+                        span Бесплатный <br>дизайн-проект
+    .container.mt-5.pt-5
+        .tab-content
+            #home.tab-pane.active ...1
+            #profile.tab-pane ...2
+            #messages.tab-pane ...3
+            #settings.tab-pane ...4
+
+
+block footer
+    include ../partials/icons-category
+

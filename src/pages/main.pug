@@ -1,6 +1,4 @@
 extends ../index
-include ../partials/main-category
-include ../layouts/news-block
 
 block variables
     - var pageTitle = 'Main'
@@ -11,7 +9,7 @@ block content
             .swiper-wrapper
                 - for(x = 0; x < 3; x++) {
                 .swiper-slide
-                    include ../partials/promo
+                    + promo('Собственное производство <br>в Хабаровске', 'Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!', 'slide-1.jpg')
                 - }
             .swiper-pagination
 

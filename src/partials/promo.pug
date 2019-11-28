@@ -1,9 +1,10 @@
-.row.promo-wrapper.m-0.p-0
-    .col-12.col-xl-5.promo-text
-        .row
-            .col-12.promo-heading
-                h2.h1.mb-4.pb-xl-3 Собственное производство <br>в Хабаровске
-            .col-12.col-xl-9
-                p.mb-5 Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!
-                a.btn-line.h6.font-weight-bold(href="#") Перейти к акции
-    .col-12.col-xl-7.bg-cover.promo-image(style='background-image: url(img/slide-1.jpg)')
+mixin promo(title, text, img, buttonLabel='Перейти к акции')
+    .row.promo-wrapper.m-0.p-0
+        .col-12.col-xl-5.promo-text
+            .row
+                .col-12.promo-heading
+                    h2.h1.mb-4.pb-xl-3!= title
+                .col-12.col-xl-9
+                    p.mb-5= text
+                    a.btn-line.h6.font-weight-bold(href="#")= buttonLabel
+        .col-12.col-xl-7.bg-cover.promo-image(style='background-image: url(img/' + img + ')')
