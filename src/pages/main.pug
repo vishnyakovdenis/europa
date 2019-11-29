@@ -76,10 +76,11 @@ block content
                                 img(src='img/logo2.png')
                         - }
 
-
-    + newsBlock('news')
+    .container.main-gap
+        + newsBlock('news')
     include ../partials/show-room
-    + newsBlock('articles', true, true)
+    .container.main-gap
+        + newsBlock('articles', true, true)
 
 block footer
     include ../partials/icons-main-page

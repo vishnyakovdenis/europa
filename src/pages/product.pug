@@ -28,7 +28,8 @@ block content
                 p.col-xl-7.mx-auto Идеальное соотношение элегантности и функциональности
                 .product-slider-pagination.d-flex.align-items-center.justify-content-center.mt-5
 
-    + product-item()
+    .container
+        + product-item(false)
 
     .container.product-description
         .row.justify-content-center
@@ -43,8 +44,8 @@ block content
                         a.btn.btn-primary.btn-block.btn-lg(href='#') Хочу такую кухню
                     .col-xl-6.mt-3
                         a.btn.btn-outline-primary.btn-block.btn-lg(href='#') Рассчитать стоимость моей кухни
-
-    + feature('Безопасность для самых маленьких', 'Мамы могут быть спокойны: каждый выдвижной механизм безопасен для вашего ребёнка', 'feature-1.png', true)
+    .container
+        + feature('Безопасность для самых маленьких', 'Мамы могут быть спокойны: каждый выдвижной механизм безопасен для вашего ребёнка', 'feature-1.png', true)
 
     .container.product-cta-form
         include ../partials/project-design-form

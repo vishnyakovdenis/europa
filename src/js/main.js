@@ -13,3 +13,10 @@ $('.mobile-nav .menu-item-has-children > a').click(function () {
 $('#search').on('shown.bs.collapse', function () {
   $('#search input').focus()
 })
+
+new IntersectionObserver(
+  ([e]) => {
+    e.target.classList.toggle('isSticky', e.boundingClientRect.top <= -1)
+  },
+  {threshold: [1]}
+).observe(document.querySelector('.category-tabs'))

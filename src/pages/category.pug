@@ -8,13 +8,13 @@ block content
 
     .container
         .row.mb-5.pb-5
-            .col-5.pr-xl-5
+            .col-xl-5.pr-xl-5
                 h1.mt-4 О КУХНЯХ САЛОНА МЕБЕЛИ «ЕВРОПА»
                 .sep-primary.my-4
                 h6.line-height-170.pr-xl-5 Кухни от салона мебели «Европа» – это многофункциональное, стильное и надёжное решение для вашего дома
                 p.big-line-height.font-weight-light.my-4.pr-xl-5 Мы воплощаем в жизнь самые смелые проекты кухонь, основываясь на стилистике Европейских брендов. А благодаря наличию собственного производства, мы делаем кухни доступными по цене, без потерь качества!
-                button.btn.btn-outline-primary.category-button Получить бесплатную консультацию <br>по подбору кухни
-            .col-7
+                button.btn.btn-outline-primary.category-button.mt-3 Получить бесплатную консультацию <br>по подбору кухни
+            .col-xl-7.mt-5.mt-xl-0
                 .bg-cover.ar-2-1(style='background-image: url(img/cat-1.jpg)')
                 .d-flex.flex-wrap.no-gutters.align-items-center
                     .col-5.position-relative.category-video-img-wrapper(data-toggle='modal' data-target='#cat-video')
@@ -22,43 +22,109 @@ block content
                             i.d-block
                                 svg(width='60' height='60')
                                     use(href='#icon-play')
-                    .col-4.ml-5.small
+                    .col-xl-4.small.mt-4.mt-xl-0.ml-xl-5
                         | Максим Скопич, основатель салона мебели «Европа», расскажет за 2 минуты, почему наши кухни остаются лучшими на рынке уже много лет подряд!
 
-        + promo('Акция "Осенний <br>обвал цен!"', 'Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!', 'slide-1.jpg')
-    .category-tabs
-        .container.mt-5.pt-5
-            ul.nav.nav-tabs.justify-content-between(role='tablist')
-                li.nav-item
-                    a#home-tab.nav-link.active.align-items-start.p-0(data-toggle='tab' href='#home')
-                        i.mr-4
-                            svg(width='37' height='30')
-                                use(href='#icon-book')
-                        span Посмотреть каталог <br>установленных кухонь
-                li.nav-item
-                    a#profile-tab.nav-link.justify-content-center.align-items-start.p-0(data-toggle='tab' href='#profile')
-                        i.mr-4
-                            svg(width='27' height='35')
-                                use(href='#icon-calculator')
-                        span Рассчитать стоимость <br>вашей кухни
-                li.nav-item
-                    a#messages-tab.nav-link.justify-content-center.align-items-start.p-0(data-toggle='tab' href='#messages')
-                        i.mr-4
-                            svg(width='31' height='33')
-                                use(href='#icon-oven')
-                        span Подробнее <br>о материалах
-                li.nav-item
-                    a#settings-tab.nav-link.justify-content-end.align-items-start.p-0(data-toggle='tab' href='#settings')
-                        i.mr-4
-                            svg(width='29' height='37')
-                                use(href='#icon-precision-compass')
-                        span Бесплатный <br>дизайн-проект
-    .container.mt-5.pt-5
-        .tab-content
-            #home.tab-pane.active ...1
-            #profile.tab-pane ...2
-            #messages.tab-pane ...3
-            #settings.tab-pane ...4
+    .container
+        + promo('Акция "Осенний <br>обвал цен!"', 'Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!', 'slide-1.jpg', 'Перейти к акции', 'small')
+    .category-tabs-wrapper.position-relative
+        .category-tabs.w-100
+            .container
+                ul.nav.nav-tabs.justify-content-between
+                    li.nav-item.mt-4.mt-xl-0
+                        a.nav-link.active.align-items-start.p-0(data-toggle='tab' href='#tab-1')
+                            i.mr-4
+                                svg(width='37' height='30')
+                                    use(href='#icon-book')
+                            span Посмотреть каталог <br>установленных кухонь
+                    li.nav-item.mt-4.mt-xl-0
+                        a.nav-link.justify-content-center.align-items-start.p-0(data-toggle='tab' href='#tab-2')
+                            i.mr-4
+                                svg(width='27' height='35')
+                                    use(href='#icon-calculator')
+                            span Рассчитать стоимость <br>вашей кухни
+                    li.nav-item.mt-4.mt-xl-0
+                        a.nav-link.justify-content-center.align-items-start.p-0(data-toggle='tab' href='#tab-3')
+                            i.mr-4
+                                svg(width='31' height='33')
+                                    use(href='#icon-oven')
+                            span Подробнее <br>о материалах
+                    li.nav-item.mt-4.mt-xl-0
+                        a.nav-link.justify-content-end.align-items-start.p-0(data-toggle='tab' href='#tab-4')
+                            i.mr-4
+                                svg(width='29' height='37')
+                                    use(href='#icon-precision-compass')
+                            span Бесплатный <br>дизайн-проект
+        .container.pt-5.mt-xl-5
+            .category-tab-content.tab-content
+                #tab-1.tab-pane.active
+                    h3.text-uppercase.font-weight-bold.medium-line-height
+                        | За 15 лет кухни «Европа» <br>порадовали более
+                        span.text-primary  14350
+                        |  семей
+                    h6 В каталоге вы сможете найти подходящий для себя вариант
+                    + product-item()
+                    + product-item()
+                    + product-item()
+
+                #tab-2.tab-pane
+                    .row.justify-content-center
+                        .col-xl-10
+                            .category-test.text-center.d-flex.align-items-center.justify-content-center
+                                .col-xl-8
+                                    h3.text-uppercase.medium-line-height.mb-0 Узнайте стоимость вашей кухни, ответив на несколько вопросов
+                                    h6.my-5.line-height-170.col-xl-10.mx-auto В конце теста вам дополнительно будет открыт доступ к полному каталогу установленных кухон
+                                    button.btn.btn-primary(type='button') Начать тест
+
+                #tab-3.tab-pane
+                    h3.text-uppercase.font-weight-bold.medium-line-height Главные достоинства <br>наших кухонь
+                    + feature('Цельные корпуса', 'Видимые детали собраны с применением скрытой фурнитуры, что придает кухне эстетический вид', 'feature-2.png', true)
+                    + feature('Здоровье превыше всего', 'Мы используем экологичные материалы и обрабатываем их с учетом безопасности для пользователей', 'product-1.png')
+                    + feature('Безопасность для самых маленьких', 'Мамы могут быть спокойны: каждый выдвижной механизм безопасен для вашего ребёнка', 'feature-1.png', true)
+
+                    .category-contact-manager
+                        h3.text-uppercase.mb-4 Ещё больше подробностей от нашего менеджера
+                        form
+                            .row
+                                .col-xl-4.mb-3.mb-xl-0
+                                    input.form-control(type='text', placeholder='Ваше имя')
+                                .col-xl-4.mb-3.mb-xl-0
+                                    input.form-control(type='tel', placeholder='Ваше телефон')
+                                .col-xl-4
+                                    input.btn.btn-secondary.btn-block.h-100(type='submit', value='Получить консультацию')
+                                .col-xl-4.ml-auto.mt-2
+                                    small.text-muted Нажимая кнопку вы подтверждаете свое согласие на обработку персональных данных
+
+                    + promo('AquaStop', 'Столешницы имеют повышенную степень защиты от влаги. Все швы и соединения обрабатываются полимерным герметиком защищающим от влаги, грибков и плесени', 'slide-1.jpg', 'Перейти к акции', 'small')
+
+                    .col-xl-6.mx-auto.main-gap
+                        h3.text-uppercase.text-center.font-weight-bold Три типа материала для столешниц на выбор
+                        h6.text-center.mt-3 Более 50 вариаций цвета у каждого
+                    + newsBlock('articles')
+
+                #tab-4.tab-pane
+                    include ../partials/project-design-form
+
+    .category-promo.bg-cover(style='background-image: url(img/cat-3.jpg)')
+        .container
+            .row.justify-content-center.text-center.text-white
+                .col-xl-8
+                    h2 Хотите получить доступ к каталогу <br>из 50 установленных в Хабаровске кухонь?
+                    .row.mt-xl-5.mt-3.justify-content-center
+                        .col-xl-3.mt-4.mt-xl-0
+                            div Ещё больше идей <br>для своей кухни
+                            .sep-primary.mt-3
+                        .col-xl-3.mt-4.mt-xl-0
+                            div Полное <br>сравнение цен
+                            .sep-primary.mt-3
+                        .col-xl-3.mt-4.mt-xl-0
+                            div Различные <br>нестандартные решения
+                            .sep-primary.mt-3
+                    a.btn.btn-primary.mt-5(href='#') Получить доступ к полному каталогу кухонь
+
+    include ../partials/show-room
+    .container.main-gap
+        + newsBlock('articles', true, true)
 
 
 block footer

@@ -1,5 +1,5 @@
-mixin product-item()
-    .container.product-item.mt-5
+mixin product-item(button=true)
+    .product-item.mt-5
         .row.flex-xl-row-reverse
             .col-xl-6.pl-xl-0
                 .bg-cover.h-100(style='background-image: url(img/product-1.png)')
@@ -26,3 +26,5 @@ mixin product-item()
                         .row.mb-2.pb-1
                             .col-auto.product-item-attr-name Фурнитура
                             .col.product-item-attr-value.font-weight-light Grass, Австралия
+                    if button
+                        a.btn-line.btn-line-primary.h6.mt-5(href='#') Подробнее о кухне

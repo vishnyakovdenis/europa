@@ -1,10 +1,10 @@
-mixin promo(title, text, img, buttonLabel='Перейти к акции')
+mixin promo(title, text, img, buttonLabel='Перейти к акции', size='big')
     .row.promo-wrapper.m-0.p-0
-        .col-12.col-xl-5.promo-text
+        .col-12.promo-text(class={'col-xl-5': size === 'big', 'col-xl-4': size === 'small'})
             .row
                 .col-12.promo-heading
                     h2.h1.mb-4.pb-xl-3!= title
-                .col-12.col-xl-9
+                .col-12(class={'col-xl-9': size === 'big', 'col-xl-11': size === 'small'})
                     p.mb-5= text
                     a.btn-line.h6.font-weight-bold(href="#")= buttonLabel
-        .col-12.col-xl-7.bg-cover.promo-image(style='background-image: url(img/' + img + ')')
+        .col-12.bg-cover.promo-image(class={'col-xl-7': size === 'big', 'col-xl-8': size === 'small'})(style='background-image: url(img/' + img + ')')

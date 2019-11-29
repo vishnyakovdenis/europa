@@ -13,23 +13,61 @@
       top: 50%
       left: 50%
       transform: translate3d(-50%, -50%, 0)
+      @include media-breakpoint-down(md)
+        transform: translate3d(-50%, -50%, 0) scale(.5)
 
     &-wrapper
-      margin-top: -85px
+      margin-top: -15%
+      @include media-breakpoint-up(xl)
+        margin-top: -85px
+  &-test
+    padding: 150px 0
+    border: 1px solid #E0E0E0
+
+  &-contact-manager
+    margin: 100px 0
+    padding: 30px
+    border: 4px solid $secondary
+    @include media-breakpoint-up(xl)
+      padding: 50px 100px
+
+  &-tab-content
+    @include media-breakpoint-up(xl)
 
   &-tabs
+    margin-top: 130px
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05)
+    background: white
+    z-index: 9
+    @include media-breakpoint-up(xl)
+      position: sticky
+      padding-top: 25px
+      top: -2px
+    &.isSticky
+      a
+        font-size: 14px
+      svg
+        width: 16px
+        height: 14px
+        margin-top: 0
+      br
+        display: none
+      span
+        padding-bottom: 15px
+        border-bottom: 2px solid transparent
 
     .nav-link
       color: #828282
-      font-size: 18px
       line-height: 1.4
-      +transition()
+      transition: color .3s
+      @include media-breakpoint-up(xl)
+        font-size: 18px
 
       span
         padding-bottom: 25px
         border-bottom: 4px solid transparent
-      i
+        transition: border-color .3s
+      svg
         margin-top: 5px
       &:hover,
       &.active
@@ -38,6 +76,11 @@
           color: $secondary
         span
           border-color: $secondary
+  &-promo
+    padding: 100px 0
+    margin: 80px 0
+    @include media-breakpoint-up(xl)
+      margin: 180px 0 230px
 
 
 
