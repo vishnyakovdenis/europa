@@ -43,7 +43,7 @@ $('.nav-tabs [data-toggle="tab"]').on('shown.bs.tab', _ => {
   console.log(catTrigger.getClientRects());
   console.log(catTrigger.scrollTop);
   window.scrollTo({
-    top: document.documentElement.scrollTop + catTrigger.getClientRects()[0].top + 20,
+    top: document.documentElement.scrollTop + catTrigger.getClientRects()[0].top + 55,
     behavior: "smooth"
   })
 })
