@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import $ from 'jquery'
 
 const catSlider = document.querySelector('.category-test-slider');
 
@@ -28,10 +29,21 @@ for (let el of catSlider.querySelectorAll('input')) {
 }
 
 const catTabs = document.querySelector('.category-tabs');
+const catTrigger = document.querySelector('.cat-tabs-trigger');
 
 catTabs && new IntersectionObserver(
   ([e]) => {
-    setTimeout(_ => {catTabs.classList.toggle('isSticky', !e.isIntersecting)}, 0)
+    setTimeout(_ => {catTabs.classList.toggle('isSticky', !e.isIntersecting)}, 100)
   },
   {threshold: [1]}
-).observe(document.querySelector('.cat-tabs-trigger'))
+).observe(catTrigger)
+
+
+$('.nav-tabs [data-toggle="tab"]').on('shown.bs.tab', _ => {
+  console.log(catTrigger.getClientRects());
+  console.log(catTrigger.scrollTop);
+  window.scrollTo({
+    top: document.documentElement.scrollTop + catTrigger.getClientRects()[0].top + 20,
+    behavior: "smooth"
+  })
+})
