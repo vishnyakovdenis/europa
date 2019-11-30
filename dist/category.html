@@ -211,10 +211,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 bg-cover promo-image col-xl-8" style="background-image: url(img/slide-1.jpg)"></div>
+              <div class="col-12 bg-cover promo-image col-xl-8" style="background-image: url(img/119.jpg)"></div>
             </div>
       </div>
       <div class="category-tabs-wrapper position-relative">
+        <div class="cat-tabs-trigger"></div>
         <div class="category-tabs w-100">
           <div class="container">
             <ul class="nav nav-tabs justify-content-between">
@@ -364,10 +365,97 @@
               <div class="row justify-content-center">
                 <div class="col-xl-10">
                   <div class="category-test text-center d-flex align-items-center justify-content-center">
-                    <div class="col-xl-8">
-                      <h3 class="text-uppercase medium-line-height mb-0">Узнайте стоимость вашей кухни, ответив на несколько вопросов</h3>
-                      <h6 class="my-5 line-height-170 col-xl-10 mx-auto">В конце теста вам дополнительно будет открыт доступ к полному каталогу установленных кухон</h6>
-                      <button class="btn btn-primary" type="button">Начать тест</button>
+                    <div class="col-xl-10">
+                      <form>
+                        <div class="swiper-container category-test-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="col-10">
+                                <h3 class="text-uppercase medium-line-height mb-0">Узнайте стоимость вашей кухни, ответив на несколько вопросов</h3>
+                                <h6 class="my-5 line-height-170 col-xl-10 mx-auto">В конце теста вам дополнительно будет открыт доступ к полному каталогу установленных кухон</h6>
+                                <button class="btn btn-primary next-slide" type="button">Начать тест</button>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <h3 class="mb-0 col-12">Выберите тип кухни</h3>
+                              <div class="d-flex align-items-center justify-content-center col-12 my-5 px-0 flex-wrap flex-xl-nowrap">
+                                <label class="img-label"><img src="img/image01.jpg">
+                                  <input type="radio" name="type"><span>Прямая</span>
+                                </label>
+                                <label class="img-label"><img src="img/image02.jpg">
+                                  <input type="radio" name="type"><span>Угловая</span>
+                                </label>
+                                <label class="img-label"><img src="img/image03.jpg">
+                                  <input type="radio" name="type"><span>П-образная</span>
+                                </label>
+                                <label class="img-label"><img src="img/image04.jpg">
+                                  <input type="radio" name="type"><span>Прямая</span>
+                                </label>
+                                <label class="img-label"><img src="img/image05.jpg">
+                                  <input type="radio" name="type"><span>Угловая</span>
+                                </label>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between col-12 flex-wrap">
+                                <button class="btn btn-outline-primary prev-slide col-12 col-xl-auto" type="button">Назад</button>
+                                <div class="text-primary my-3 col-12 col-xl-auto">Вопрос 1 из 3</div>
+                                <button class="btn btn-primary next-slide col-12 col-xl-auto" type="button" disabled="disabled">Далее</button>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <h3 class="mb-0 col-12 col-xl-7">Укажите длину кухонного гарнитура в погонных метрах</h3>
+                              <div class="d-flex align-items-center justify-content-center col-12 my-5 px-0 flex-wrap flex-xl-nowrap">
+                                <input class="form-control narrow" type="text" placeholder="Длина кухонного гарнитура, м">
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between col-12 flex-wrap">
+                                <button class="btn btn-outline-primary prev-slide col-12 col-xl-auto" type="button">Назад</button>
+                                <div class="text-primary my-3 col-12 col-xl-auto">Вопрос 2 из 3</div>
+                                <button class="btn btn-primary next-slide col-12 col-xl-auto" type="button">Далее</button>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <h3 class="mb-0 col-12">Когда планируете установку кухни?</h3>
+                              <div class="col-12"></div>
+                              <div class="d-flex col-12 col-xl-auto my-5 px-0 flex-column align-items-start narrow">
+                                <div class="custom-control custom-checkbox my-2">
+                                  <input class="custom-control-input" id="pl-1" type="checkbox">
+                                  <label class="custom-control-label" for="pl-1">В ближайшее время</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                  <input class="custom-control-input" id="pl-2" type="checkbox">
+                                  <label class="custom-control-label" for="pl-2">В ближайшие 3 месяца</label>
+                                </div>
+                                <div class="custom-control custom-checkbox my-2">
+                                  <input class="custom-control-input" id="pl-3" type="checkbox">
+                                  <label class="custom-control-label" for="pl-3">В ближайшие 6 месяцев</label>
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between col-12 flex-wrap">
+                                <button class="btn btn-outline-primary prev-slide col-12 col-xl-auto" type="button">Назад</button>
+                                <div class="text-primary my-3 col-12 col-xl-auto">Вопрос 3 из 3</div>
+                                <button class="btn btn-primary next-slide col-12 col-xl-auto" type="button">Далее</button>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <p class="col-12 text-primary font-weight-bold mb-4">Тест пройден</p>
+                              <h3 class="mb-0 col-12 col-xl-9">Для получения расчета и подарков укажите Ваш телефон и почту</h3>
+                              <div class="mt-5 font-weight-light col-12 narrow">
+                                <div class="form-group">
+                                  <input class="form-control" type="text" placeholder="Ваше имя">
+                                </div>
+                                <div class="form-group">
+                                  <input class="form-control" type="text" placeholder="Ваш телефон">
+                                </div>
+                                <div class="form-group">
+                                  <button class="btn btn-primary btn-block" type="submit">Записаться на встречу с дизайнером</button>
+                                </div>
+                                <div class="form-group text-center">
+                                  <p class="small px-5 mt-4 text-muted">Нажимая кнопку вы подтверждаете свое согласие на обработку персональных данных</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -457,7 +545,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 bg-cover promo-image col-xl-8" style="background-image: url(img/slide-1.jpg)"></div>
+                    <div class="col-12 bg-cover promo-image col-xl-8" style="background-image: url(img/IMG_7606.jpg)"></div>
                   </div>
               <div class="col-xl-6 mx-auto main-gap">
                 <h3 class="text-uppercase text-center font-weight-bold">Три типа материала для столешниц на выбор</h3>

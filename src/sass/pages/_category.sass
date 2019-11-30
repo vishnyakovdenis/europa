@@ -21,8 +21,49 @@
       @include media-breakpoint-up(xl)
         margin-top: -85px
   &-test
-    padding: 150px 0
+    padding: 50px 0
     border: 1px solid #E0E0E0
+    @include media-breakpoint-up(xl)
+      padding: 130px 0
+
+    &-slider
+      .swiper-slide
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+      .img-label
+        text-align: left
+        font-size: 18px
+        position: relative
+        padding: 15px
+
+        &:hover
+          color: $primary
+
+        input
+          position: absolute
+          visibility: hidden
+          &:checked
+            + span:after
+              +overlay
+              border: 2px solid $primary
+
+        img
+          width: 170px
+          height: 150px
+          margin-bottom: 20px
+          display: block
+
+      [type="submit"]
+        height: 50px
+      .btn-outline-primary
+        border-color: #BDBDBD
+        &:hover
+          background: #BDBDBD
+
+      .narrow
+        max-width: 420px
 
   &-contact-manager
     margin: 100px 0
@@ -35,26 +76,26 @@
     @include media-breakpoint-up(xl)
 
   &-tabs
-    margin-top: 130px
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05)
     background: white
     z-index: 9
     @include media-breakpoint-up(xl)
       position: sticky
-      padding-top: 25px
-      top: -2px
+      padding-top: 15px
+      top: 0
     &.isSticky
-      a
-        font-size: 14px
-      svg
-        width: 16px
-        height: 14px
-        margin-top: 0
-      br
-        display: none
-      span
-        padding-bottom: 15px
-        border-bottom: 2px solid transparent
+      @include media-breakpoint-up(xl)
+        a
+          font-size: 14px
+        svg
+          width: 16px
+          height: 14px
+          margin-top: 0
+        br
+          display: none
+        span
+          padding-bottom: 14px !important
+          border-width: 2px !important
 
     .nav-link
       color: #828282
@@ -81,6 +122,12 @@
     margin: 80px 0
     @include media-breakpoint-up(xl)
       margin: 180px 0 230px
+
+
+.cat-tabs-trigger
+  margin-top: 110px
+  height: 10px
+  margin-bottom: 10px
 
 
 

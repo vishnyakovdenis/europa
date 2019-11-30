@@ -26,8 +26,9 @@ block content
                         | Максим Скопич, основатель салона мебели «Европа», расскажет за 2 минуты, почему наши кухни остаются лучшими на рынке уже много лет подряд!
 
     .container
-        + promo('Акция "Осенний <br>обвал цен!"', 'Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!', 'slide-1.jpg', 'Перейти к акции', 'small')
+        + promo('Акция "Осенний <br>обвал цен!"', 'Европейское оборудование, производство площадью 2000 кв. м. и штат из более чем 40 сотрудников. Цена меньше - качество выше!', '119.jpg', 'Перейти к акции', 'small')
     .category-tabs-wrapper.position-relative
+        .cat-tabs-trigger
         .category-tabs.w-100
             .container
                 ul.nav.nav-tabs.justify-content-between
@@ -71,10 +72,92 @@ block content
                     .row.justify-content-center
                         .col-xl-10
                             .category-test.text-center.d-flex.align-items-center.justify-content-center
-                                .col-xl-8
-                                    h3.text-uppercase.medium-line-height.mb-0 Узнайте стоимость вашей кухни, ответив на несколько вопросов
-                                    h6.my-5.line-height-170.col-xl-10.mx-auto В конце теста вам дополнительно будет открыт доступ к полному каталогу установленных кухон
-                                    button.btn.btn-primary(type='button') Начать тест
+                                .col-xl-10
+                                    form
+                                        .swiper-container.category-test-slider
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    .col-10
+                                                        h3.text-uppercase.medium-line-height.mb-0 Узнайте стоимость вашей кухни, ответив на несколько вопросов
+                                                        h6.my-5.line-height-170.col-xl-10.mx-auto В конце теста вам дополнительно будет открыт доступ к полному каталогу установленных кухон
+                                                        button.btn.btn-primary.next-slide(type='button') Начать тест
+                                                .swiper-slide
+                                                    h3.mb-0.col-12 Выберите тип кухни
+                                                    .d-flex.align-items-center.justify-content-center.col-12.my-5.px-0.flex-wrap.flex-xl-nowrap
+                                                        label.img-label
+                                                            img(src='img/image01.jpg')
+                                                            input(type='radio' name='type')
+                                                            span Прямая
+                                                        label.img-label
+                                                            img(src='img/image02.jpg')
+                                                            input(type='radio' name='type')
+                                                            span Угловая
+                                                        label.img-label
+                                                            img(src='img/image03.jpg')
+                                                            input(type='radio' name='type')
+                                                            span П-образная
+                                                        label.img-label
+                                                            img(src='img/image04.jpg')
+                                                            input(type='radio' name='type')
+                                                            span Прямая
+                                                        label.img-label
+                                                            img(src='img/image05.jpg')
+                                                            input(type='radio' name='type')
+                                                            span Угловая
+                                                    .d-flex.align-items-center.justify-content-between.col-12.flex-wrap
+                                                        button.btn.btn-outline-primary.prev-slide.col-12.col-xl-auto(type='button') Назад
+                                                        div.text-primary.my-3.col-12.col-xl-auto Вопрос 1 из 3
+                                                        button.btn.btn-primary.next-slide.col-12.col-xl-auto(type='button' disabled='disabled') Далее
+
+                                                .swiper-slide
+                                                    h3.mb-0.col-12.col-xl-7 Укажите длину кухонного гарнитура в погонных метрах
+                                                    .d-flex.align-items-center.justify-content-center.col-12.my-5.px-0.flex-wrap.flex-xl-nowrap
+                                                        input.form-control.narrow(type='text' placeholder='Длина кухонного гарнитура, м')
+                                                    .d-flex.align-items-center.justify-content-between.col-12.flex-wrap
+                                                        button.btn.btn-outline-primary.prev-slide.col-12.col-xl-auto(type='button') Назад
+                                                        div.text-primary.my-3.col-12.col-xl-auto Вопрос 2 из 3
+                                                        button.btn.btn-primary.next-slide.col-12.col-xl-auto(type='button') Далее
+
+                                                .swiper-slide
+                                                    h3.mb-0.col-12 Когда планируете установку кухни?
+                                                    .col-12
+                                                    .d-flex.col-12.col-xl-auto.my-5.px-0.flex-column.align-items-start.narrow
+                                                        .custom-control.custom-checkbox.my-2
+                                                            input#pl-1.custom-control-input(type='checkbox')
+                                                            label.custom-control-label(for='pl-1') В ближайшее время
+
+                                                        .custom-control.custom-checkbox.my-2
+                                                            input#pl-2.custom-control-input(type='checkbox')
+                                                            label.custom-control-label(for='pl-2') В ближайшие 3 месяца
+
+                                                        .custom-control.custom-checkbox.my-2
+                                                            input#pl-3.custom-control-input(type='checkbox')
+                                                            label.custom-control-label(for='pl-3') В ближайшие 6 месяцев
+
+
+                                                    .d-flex.align-items-center.justify-content-between.col-12.flex-wrap
+                                                        button.btn.btn-outline-primary.prev-slide.col-12.col-xl-auto(type='button') Назад
+                                                        div.text-primary.my-3.col-12.col-xl-auto Вопрос 3 из 3
+                                                        button.btn.btn-primary.next-slide.col-12.col-xl-auto(type='button') Далее
+
+                                                .swiper-slide
+                                                    p.col-12.text-primary.font-weight-bold.mb-4 Тест пройден
+                                                    h3.mb-0.col-12.col-xl-9 Для получения расчета и подарков укажите Ваш телефон и почту
+
+                                                    .mt-5.font-weight-light.col-12.narrow
+                                                        .form-group
+                                                            input.form-control(type='text' placeholder='Ваше имя')
+                                                        .form-group
+                                                            input.form-control(type='text' placeholder='Ваш телефон')
+                                                        .form-group
+                                                            button.btn.btn-primary.btn-block(type="submit") Записаться на встречу с дизайнером
+                                                        .form-group.text-center
+                                                            p.small.px-5.mt-4.text-muted Нажимая кнопку вы подтверждаете свое согласие на обработку персональных данных
+
+
+
+
+
 
                 #tab-3.tab-pane
                     h3.text-uppercase.font-weight-bold.medium-line-height Главные достоинства <br>наших кухонь
@@ -95,7 +178,7 @@ block content
                                 .col-xl-4.ml-auto.mt-2
                                     small.text-muted Нажимая кнопку вы подтверждаете свое согласие на обработку персональных данных
 
-                    + promo('AquaStop', 'Столешницы имеют повышенную степень защиты от влаги. Все швы и соединения обрабатываются полимерным герметиком защищающим от влаги, грибков и плесени', 'slide-1.jpg', 'Перейти к акции', 'small')
+                    + promo('AquaStop', 'Столешницы имеют повышенную степень защиты от влаги. Все швы и соединения обрабатываются полимерным герметиком защищающим от влаги, грибков и плесени', 'IMG_7606.jpg', 'Перейти к акции', 'small')
 
                     .col-xl-6.mx-auto.main-gap
                         h3.text-uppercase.text-center.font-weight-bold Три типа материала для столешниц на выбор
