@@ -34,9 +34,9 @@
     @include media-breakpoint-up(xl)
       .bg-cover
         padding-top: 320px
-        width: 435px
+        width: calc(100% - 35px)
   &-medium
-    @include media-breakpoint-down(md)
+    @include media-breakpoint-down(lg)
       order: 1
   a:hover
     color: $primary !important
